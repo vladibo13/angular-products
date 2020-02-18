@@ -1,0 +1,10 @@
+
+<ul class="list-group shadow my-2">
+    <li class="list-group-item">
+      <p>Name: {{product.name}}</p> 
+      <p>Amount: {{product.amount}}</p> 
+      <p>Inventory Code: {{product.inventoryCode}}</p>
+      <a [routerLink]="['/detail', product.itemNO]"   class="btn btn-outline-primary btn-sm mx-1" routerLinkActive="active">Details</a>
+      <button (click)="delete(product.id)" type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+    </li>
+</ul>

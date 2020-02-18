@@ -1,0 +1,22 @@
+<div *ngIf="product" class="container ">
+    <div class="card my-3">
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">{{product.amount}}</p>
+        </div>
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="withdrawal">Withdrawal</label>
+        <input [formControl]="withdrawalVal" type="number" class="form-control" id="withdrawal">
+        <button (click)="withdrawal(product.id, withdrawalVal.value)" class="btn btn-primary mt-2">Withdrawal</button>
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="deposit">Deposit</label>
+        <input [formControl]="depositVal" type="number" class="form-control" id="deposit">
+        <button (click)="deposit(product.id, depositVal.value)" class="btn btn-primary mt-2">Deposit</button>
+    </div>
+</div>
+
+
